@@ -3,8 +3,14 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #555;
+}
+
 #header {
-  width: 100%;
+  position: relative;
+  width: 1280px;
   height: 70px;
   background: #fff;
   border-bottom: 1px solid #e4e4e4;
@@ -20,7 +26,7 @@
 }
 
 .left-nav {
-  width: 400px;
+  width: 490px;
   height: 69px;
   line-height: 69px;
   margin-left: 280px;
@@ -42,9 +48,11 @@ li:hover {
 };
 
 .index {
-  color: #555;
-  text-decoration: none;
   margin-left: 15px;
+}
+
+.left-nav li:hover .arrow {
+  transform: rotate(180deg);
 }
 
 .index:hover {
@@ -55,6 +63,7 @@ li:hover {
 .left-nav li .arrow {
   /* 里面没有内容用display: block撑开; */
   display: block;
+  transition: all 0.4s linear;
   position: absolute;
   top: 33px;
   right: 30px;
@@ -63,3 +72,184 @@ li:hover {
   height: 7px;
   background-position: 0 -47px;
 }
+
+#header .search {
+  position: absolute;
+  top: 20px;
+  right: 270px;
+  width: 240px;
+  height: 32px;
+}
+
+.search input {
+  padding-left: 8px;
+  width: 190px;
+  height: 30px;
+  border: 1px solid #e4e4e4;
+}
+
+input::-webkit-input-placeholder{
+  color:grey;
+  font-weight: lighter;
+}
+
+.search-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 40px;
+  height: 30px;
+  border: 1px solid;  
+  border-color: #e4e4e4 #e4e4e4 #e4e4e4 transparent;
+}
+
+.search-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  background-image: url(img/cssSprites.png);
+  background-position: 0 0;
+}
+
+.login-reg{
+  position: absolute;
+  right: 80px;
+  line-height:70px;
+  top: 0;
+  width: 140px;
+  height: 70px;
+}
+
+.login-reg a{
+  margin-right: 30px;
+  font-size: 14px;
+  color: grey;
+  font-weight: lighter;
+}
+
+.line {
+  position: absolute;
+  top: 29px;
+  right: 94px;
+  width: 1px;
+  height: 16px;
+  background: grey;
+}
+
+.login-reg a:hover {
+  color: #35b558;
+}
+
+.community ul {
+  position: absolute;
+  width: 190px;
+  height: 140px;
+  z-index: 200;
+  display: none;
+  box-shadow: -1px 3px 5px rgba(000, 000, 000, 0.3);
+}
+
+.course ul {
+  position: relative;
+  display: none;
+  z-index: 200;
+  width: 190px;
+  height: 140px;
+  box-shadow: -1px 3px 5px rgba(000, 000, 000, 0.3);
+}
+
+.community-title:hover .community ul {
+  display: block;
+}
+
+.community ul li , .course ul li ,.company ul li{
+  text-align: left;
+  line-height: 35px;
+  font-size: 12px;
+  padding: 0 15px;
+  width: 160px;
+  height: 35px;
+  /* border: 1px solid black; */
+}
+
+.community ul li:nth-child(2n), .course ul li:nth-child(2n), .company ul li:nth-child(2n) {
+  background:#FAFAFA;
+}
+
+.course-title:hover .course ul{
+  display: block;
+}
+
+.company ul li span:first-child {
+  display: block;
+  width: 14px;
+  float: left;
+  margin-top: 10px;
+  margin-right: 5px;
+  height: 14px;
+}
+
+.zhineng-icon {
+  background-image: url(img/cssSprite2.png);
+  background-position: -35px 0;
+}
+
+.jishu-icon {
+  background-image: url(img/cssSprite2.png);
+  background-position: -72px 0;  
+}
+
+.jisuan-icon {
+  background-image: url(img/cssSprite2.png);
+  background-position: -20px 0;  
+}
+
+#header .company .zhuanqu-icon {
+  width: 20px;
+  height: 14px;
+  background-image: url(img/cssSprite2.png);
+  background-image: url(img/cssSprite2.png);
+  background-position: 0 0;      
+}
+
+.Qualcomm-icon {
+  background-image: url(img/cssSprite2.png);
+  background-position: -50px 0;
+}
+
+.company ul {
+  position: relative;
+  z-index: 200;
+  display: none;
+  width: 190px;
+  height: 175px;
+  box-shadow: -1px 3px 5px rgba(000, 000, 000, 0.3);
+}
+
+.company-title:hover .company ul {
+  display: block;
+}
+
+.job {
+  width: 200px;
+  height: 381px;
+  box-shadow: -1px 3px 5px rgba(000, 000, 000, 0.3);  
+}
+/* .job li {
+  width: 200px;
+  height: 30px;
+} */
+.job-title .job h6{
+  font-size: 12px;
+  font-weight: lighter;
+  width: 100%;
+  height: 20px;
+  background: #FAFAFA;
+}
+
+
