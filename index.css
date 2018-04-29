@@ -20,17 +20,46 @@
 }
 
 .left-nav {
-  width: 490px;
+  width: 400px;
+  height: 69px;
+  line-height: 69px;
+  margin-left: 280px;
 }
 
 .left-nav li {
+  color: gray;
   list-style: none;
+  font-size: 15px;
   float: left;
   cursor: pointer;
-  padding-right: 32px;
+  width: 75px;
+  font-weight: lighter;
+  position: relative;
 }
 
-li a {
-  color: #555555;
+li:hover {
+  color: #35b558
+};
+
+.index {
+  color: #555;
   text-decoration: none;
+  margin-left: 15px;
+}
+
+.index:hover {
+  color: #35b558;
+  text-decoration: none;
+}
+
+.left-nav li .arrow {
+  /* 里面没有内容用display: block撑开; */
+  display: block;
+  position: absolute;
+  top: 33px;
+  right: 30px;
+  background-image: url(img/cssSprites.png);
+  width: 11px;
+  height: 7px;
+  background-position: 0 -47px;
 }
