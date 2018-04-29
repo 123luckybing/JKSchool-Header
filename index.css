@@ -235,21 +235,242 @@ input::-webkit-input-placeholder{
   display: block;
 }
 
-.job {
+.career-content {
+  position: relative;
+  display: none;
+  z-index: 200;
+  margin-top: 2px;
   width: 200px;
   height: 381px;
-  box-shadow: -1px 3px 5px rgba(000, 000, 000, 0.3);  
+  box-shadow: -1px 3px 5px rgba(000, 000, 000, 0.3);
 }
-/* .job li {
-  width: 200px;
-  height: 30px;
-} */
-.job-title .job h6{
+
+.career-title:hover .career-content {
+  display: block;
+}
+
+.web-content .web-icon {
+  width: 14px;
+  height: 14px;
+  margin-top: 10px;
+  margin-left: 15px;
+  background-image: url(img/cssSprites.png);
+  background-position: -94px -23px;
+}
+
+.web-content .web-info {
+  margin-left: 10px;
   font-size: 12px;
-  font-weight: lighter;
-  width: 100%;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.web {
+  position: relative;
+  width: 200px;
+  height: 80px;
+}
+
+.left-nav .career-content .web .web-title {
+  display: block;
+  width: 185px;
   height: 20px;
+  font-size: 12px;
+  color: #ccc;
+  line-height: 20px;
+  padding-left: 15px;
   background: #FAFAFA;
 }
+
+.web-content {
+  width: 200px;
+  height: 60px;
+}
+
+.wx {
+  position: absolute;
+  top: 50px;
+  width: 200px;
+  height: 30px;
+}
+
+.wx .wx-icon {
+  width: 14px;
+  height: 14px;
+  margin-top: 8px;
+  margin-left: 15px;
+  background-image: url(img/cssSprites.png);
+  background-position: -99px 0;
+}
+
+.wx .wx-content {
+  width: 150px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.career-title header {
+  width: 183px;
+  height: 20px;
+  background: #FAFAFA;
+  font-size: 12px;
+  color: #ccc;
+  line-height: 20px;
+  padding-left: 15px;
+}
+
+.career-content .Android-icon {
+  width: 14px;
+  height: 14px;
+  margin-top: 8px;
+  margin-left: 15px;
+  background-image: url(img/cssSprites.png);
+  background-position: 0 -26px;
+}
+
+.career-content .Android-content {
+  width: 150px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.career-content .ios-icon {
+  width: 14px;
+  height: 14px;
+  margin-top: 8px;
+  margin-left: 15px;
+  background-image: url(img/cssSprites.png);
+  background-position: -48px -19px;
+}
+
+.career-content  .ios-content {
+  width: 150px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.career-content .houduan {
+  width: 180px;
+  height: 20px;
+  background: #FAFAFA;
+  font-size: 12px;
+  color: #ccc;
+  line-height: 20px;
+  padding-left: 15px;
+}
+
+.career-content .python-icon, .career-content .php-icon,.career-content .golang-icon, .career-content .golang-icon {
+  width: 14px;
+  height: 14px;
+  margin-top: 8px;
+  margin-left: 15px;
+  background-image: url(img/cssSprites.png);
+}
+
+.career-content .python-icon {
+  background-position: -76px 0;
+}
+
+.career-content .php-icon {
+  width: 20px;
+  height: 14px;
+  background-position: -48px 0;
+}
+
+.career-content .golang-icon {
+  background-position: -20px -26px;
+}
+
+.career-content .python-content,.career-content .python-content, .career-content .php-content, .career-content .golang-content,.career-content .python-content, .career-content .dashuju-content {
+  width: 150px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.career-content  .python-block, .career-content  .php-block ,.career-content  .php-block {
+  width: 200px;
+  height: 30px;
+}
+
+.career-content  .dashuju {
+  position: absolute;
+  width: 183px;
+  height: 20px;
+  background: #FAFAFA;
+  font-size: 12px;
+  color: #ccc;
+  line-height: 20px;
+  padding-left: 15px;
+  top: 270px;
+}
+
+.career-content .dashuju-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url(img/data.png);
+  background-position: 0 0;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.career-content .dashuju-content {
+  position: absolute;
+  top: 290px;
+  left: 25px;
+}
+.career-content .zhineng-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url(img/ml.png);
+  background-position: 0 0;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.career-content .zhineng {
+  position: absolute;
+  top: 320px;
+  padding-left: 15px;
+  width: 183px;
+  height: 20px;
+  background: #FAFAFA;
+  color: #ccc;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.career-content  .zhineng-block {
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  top: 320px;
+}
+
+.career-content .zhineng-content {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  width: 150px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+
+
+
+
+
 
 
