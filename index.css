@@ -8,6 +8,10 @@ a {
   color: #555;
 }
 
+li {
+  list-style: none;
+}
+
 #header {
   position: relative;
   width: 1280px;
@@ -146,7 +150,8 @@ input::-webkit-input-placeholder{
 }
 
 .community ul {
-  position: absolute;
+  margin-top: 2px;
+  position: relative;
   width: 190px;
   height: 140px;
   z-index: 200;
@@ -155,6 +160,7 @@ input::-webkit-input-placeholder{
 }
 
 .course ul {
+  margin-top: 2px;
   position: relative;
   display: none;
   z-index: 200;
@@ -174,13 +180,14 @@ input::-webkit-input-placeholder{
   padding: 0 15px;
   width: 160px;
   height: 35px;
-  /* border: 1px solid black; */
 }
 
 .community ul li:nth-child(2n), .course ul li:nth-child(2n), .company ul li:nth-child(2n) {
   background:#FAFAFA;
 }
-
+.community ul li:nth-child(2n+1), .course ul li:nth-child(2n+1), .company ul li:nth-child(2n+1) {
+  background:#fff;
+}
 .course-title:hover .course ul{
   display: block;
 }
@@ -224,6 +231,7 @@ input::-webkit-input-placeholder{
 
 .company ul {
   position: relative;
+  margin-top: 2px;
   z-index: 200;
   display: none;
   width: 190px;
@@ -400,6 +408,7 @@ input::-webkit-input-placeholder{
 .career-content  .python-block, .career-content  .php-block ,.career-content  .php-block {
   width: 200px;
   height: 30px;
+  background: #fff;
 }
 
 .career-content  .dashuju {
@@ -428,6 +437,7 @@ input::-webkit-input-placeholder{
   top: 290px;
   left: 25px;
 }
+
 .career-content .zhineng-icon {
   width: 20px;
   height: 20px;
@@ -466,6 +476,186 @@ input::-webkit-input-placeholder{
   line-height: 30px;
   margin-left: 10px;
 }
+
+#aside {
+  position: absolute;
+  width: 210px;
+  height: 523px;
+  margin-left: 140px;
+  margin-top: 20px;
+}
+
+.aside-allCategory {
+  position: relative;  
+  width: 210px;
+  height: 348px;
+  border: 1px solid #35b558;
+}
+
+.course-warehouse {
+  position: relative;
+  width: 210px;
+  height: 45px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.aside-allCategory h2 {
+  position: absolute;
+  width: 144px;
+  height: 45px;
+  line-height: 45px;
+  left :33px;
+  top: 0;
+  color: #35b558;
+  font-size: 14px;
+  font-weight: 150;
+  width: 144px;
+  height: 45px;
+}
+
+.course-warehouse img {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  width: 15px;
+  height: 15px;
+}
+
+#aside li h6 {
+  font-size: 12px;
+  color: #666;
+  font-size: 12px;
+  font-weight: lighter;
+  line-height: 37px;
+  cursor: pointer;
+  width: 176px;
+  height: 37px;
+  padding-left: 33px;
+  border-bottom: 1px solid #f5f5f5; 
+}
+
+#aside li:hover h6 {
+  color: #35b558;
+  margin-left: -2px;
+} 
+
+.wrap {
+  position: relative;
+  z-index: -1;
+  top: 20px;
+  left: 365px;
+  width: 776px;
+  height: 38px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.wrap ul li {
+  float: left;
+  padding: 0 21px;
+  background: #fff;
+  border-right: 1px solid #f5f5f5;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: default;
+  width: 100px;
+  height: 38px;
+}
+
+.qd-content {
+  display: none;
+  width: 402px;
+  height: 407px;
+  position: absolute;
+  top: 0;
+  left: 210px;
+  border: 1px solid #ddd;
+  z-index: 200;
+  background: #fff;
+}
+
+.qd:hover .qd-content {
+  display: block;
+}
+
+.qd-content li:hover {
+ color: #35b558;
+}
+
+.web-content, .wx , .Android, .ios {
+  background: #fff;
+}
+
+.qd-content span {
+  cursor: pointer;
+  display: block;
+  width: 370px;
+  height: 37px;
+  color: #000;
+  font-size: 13px;
+  font-weight: 200;
+  margin-left: 15px;
+  border-bottom: 1px solid #f5f5f5;
+  line-height: 45px;
+}
+
+.qd-content span:hover {
+  color: #35b558;
+}
+
+.qd-jichu-content, .qd-jinjie-content, .qd-kuangjia-content,.qd-youxi-content {
+  width: 370px;
+  height: 37px;
+  margin-left: 10px;
+}
+
+.qd-jichu-content li, .qd-jinjie-content li, .qd-kuangjia-content li,.qd-youxi-content li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 0 7px;
+  color: #666;
+  display: inline-block;
+  font-size: 12px;
+  /* white-space: nowrap; */
+  border-left: 1px solid #e0e0e0;
+  font-weight: 100;
+  /* text-align: justify; */
+}
+
+.qd-jichu-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.qd-jinjie-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.qd-kuangjia-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.qd-youxi-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.qd-youxi {
+  margin-top: 60px;
+}
+
+.mobile-content {
+  z-index: 200;
+  position: absolute;
+  top: 0;
+  left: 210px;
+  width: 402px;
+  height: 343px;
+  border: 1px solid black;
+}
+
+
+
+
 
 
 
