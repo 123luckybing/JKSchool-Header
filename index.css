@@ -582,11 +582,15 @@ input::-webkit-input-placeholder{
  color: #35b558;
 }
 
+.mobile-content li:hover {
+  color: #35b558;
+ }
+
 .web-content, .wx , .Android, .ios {
   background: #fff;
 }
 
-.qd-content span {
+.qd-content span,.mobile-content span,.hd-content span {
   cursor: pointer;
   display: block;
   width: 370px;
@@ -603,13 +607,25 @@ input::-webkit-input-placeholder{
   color: #35b558;
 }
 
-.qd-jichu-content, .qd-jinjie-content, .qd-kuangjia-content,.qd-youxi-content {
+.hd-content li:hover {
+  color: #35b558;
+}
+
+.mobile-content span:hover {
+  color: #35b558;
+}
+
+.hd-content span:hover {
+  color: #35b558;
+}
+
+.qd-jichu-content, .application-content,.qd-jinjie-content, .qd-kuangjia-content,.qd-youxi-content,.game-content,.normal-content {
   width: 370px;
   height: 37px;
   margin-left: 10px;
 }
 
-.qd-jichu-content li, .qd-jinjie-content li, .qd-kuangjia-content li,.qd-youxi-content li {
+.qd-jichu-content li, .qd-jinjie-content li, .qd-kuangjia-content li,.qd-youxi-content li,.application-content li ,.game-content li ,.normal-content li,.python-contain li,.php-contain li {
   cursor: pointer;
   margin-bottom: 10px;
   margin-top: 5px;
@@ -617,17 +633,23 @@ input::-webkit-input-placeholder{
   color: #666;
   display: inline-block;
   font-size: 12px;
-  /* white-space: nowrap; */
   border-left: 1px solid #e0e0e0;
   font-weight: 100;
-  /* text-align: justify; */
 }
 
 .qd-jichu-content li:first-child {
   border-left: 1px solid #fff;  
 }
 
+.python-contain,.php-contain {
+  margin-left: 8px;
+}
+
 .qd-jinjie-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.php-contain li:first-child {
   border-left: 1px solid #fff;  
 }
 
@@ -635,8 +657,28 @@ input::-webkit-input-placeholder{
   border-left: 1px solid #fff;  
 }
 
+.game-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.normal-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
 .qd-youxi-content li:first-child {
   border-left: 1px solid #fff;  
+}
+
+.python-contain li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.application-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.mobile-search:hover .mobile-content {
+  display: block;
 }
 
 .qd-youxi {
@@ -646,12 +688,27 @@ input::-webkit-input-placeholder{
 .mobile-content {
   z-index: 200;
   position: absolute;
+  background: #fff;
+  display: none;
   top: 0;
   left: 210px;
   width: 402px;
   height: 343px;
-  border: 1px solid black;
+  border: 1px solid #ddd;
 }
+
+.hd-content {
+  position: absolute;
+  background: #fff;
+  /* display: none; */
+  top: 0;
+  left: 210px;
+  width: 402px;
+  height: 666px;
+  border: 1px solid #ddd;
+}
+
+
 
 
 
