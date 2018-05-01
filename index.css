@@ -496,7 +496,14 @@ input::-webkit-input-placeholder{
   height: 348px;
   border: 1px solid #35b558;
 }
-
+.jishuzhicheng-content {
+  position: absolute;
+  top: 0;
+  left: 210px;
+  width: 402px;
+  height: 380px;
+  border: 1px solid #ddd;
+}
 .course-warehouse {
   position: relative;
   width: 210px;
@@ -542,29 +549,6 @@ input::-webkit-input-placeholder{
 #aside li:hover h6 {
   color: #35b558;
   margin-left: -2px;
-} 
-
-.wrap {
-  position: relative;
-  z-index: -1;
-  top: 20px;
-  left: 365px;
-  width: 776px;
-  height: 38px;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-
-.wrap ul li {
-  float: left;
-  padding: 0 21px;
-  background: #fff;
-  border-right: 1px solid #f5f5f5;
-  font-size: 12px;
-  font-weight: 400;
-  cursor: default;
-  width: 100px;
-  height: 38px;
 }
 
 .qd-content {
@@ -596,6 +580,8 @@ input::-webkit-input-placeholder{
 }
 
 .qd-content span,
+.jishuzhicheng-content span,
+.hulianwangsecond-content span,
 .mobile-content span,
 .hd-content span,
 .yun-calculator-content span,
@@ -616,7 +602,12 @@ input::-webkit-input-placeholder{
 .qd-content span:hover {
   color: #35b558;
 }
-
+.hulianwangsecond-content span:hover {
+  color: #35b558;
+}
+.hulianwangsecond-content li:hover {
+  color: #35b558;
+}
 .yun-calculator-content span:hover {
   color: #35b558;
 }
@@ -640,6 +631,7 @@ input::-webkit-input-placeholder{
 }
 
 .qd-jichu-content li,
+.hulianwangsecond-content li,
 .qd-jinjie-content li,
 .qd-kuangjia-content li,
 .qd-youxi-content li,
@@ -659,9 +651,17 @@ input::-webkit-input-placeholder{
 .jichu-content li,
 .weiruan-content li,
 .baidu-content li,
+.xunihua-content li,
 .design-jichu-content li,
 .game-design-content li,
 .product-jili-content li,
+.sql-content li,
+.tongxin-content li,
+.yunpingtai-content li,
+.NoSQL-content li,
+.xinxi-content li,
+.renji-content li,
+.dashuju-second-content li,
 .view-design-content li {
   cursor: pointer;
   margin-bottom: 10px;
@@ -678,7 +678,15 @@ input::-webkit-input-placeholder{
   border-left: 1px solid #fff;  
 }
 
+.xunihua-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
 .product-jili-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.NoSQL-content li:first-child {
   border-left: 1px solid #fff;  
 }
 
@@ -687,6 +695,10 @@ input::-webkit-input-placeholder{
 }
 
 .go-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.xinxi-content li:first-child {
   border-left: 1px solid #fff;  
 }
 
@@ -709,12 +721,17 @@ input::-webkit-input-placeholder{
 .jichu-content li:first-child {
   border-left: 1px solid #fff;  
 }
-
+.renji-content li:first-child {
+  border-left: 1px solid #fff;  
+}
 .view-design-content li:first-child {
   border-left: 1px solid #fff;  
 }
 
 .python-contain,
+.xinxi-content,
+.tongxin-content,
+.sql-content,
 .php-contain,
 .node-content,
 .asp-content,
@@ -728,7 +745,15 @@ input::-webkit-input-placeholder{
 .design-jichu-content,
 .game-design-content,
 .ceshi-tool-content,
+.renji-content,
 .yunCalculator-container,
+.dashuju-second-content,
+.xunihua-content,
+.NoSQL-content,
+.kaiyuan-content,
+.yunpingtai-content,
+.yingjian-jiagou-content,
+.wulianwangsecond-content,
 .view-design-content {
   margin-left: 8px;
 }
@@ -737,7 +762,32 @@ input::-webkit-input-placeholder{
   border-left: 1px solid #fff;  
 }
 
+.kaiyuan-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+.tongxin-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+.wulianwangsecond-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.yingjian-jiagou-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+.sql-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.dashuju-second-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
 .ceshi-tool-content li:first-child {
+  border-left: 1px solid #fff;  
+}
+
+.yunpingtai-content li:first-child {
   border-left: 1px solid #fff;  
 }
 
@@ -883,17 +933,217 @@ input::-webkit-input-placeholder{
   color: #35b558;
 }
 
+.yun-calculator:hover .yun-calculator-content {
+  display: block;
+}
+
 .yun-calculator-content {
   position: absolute;
+  display: none;
   top :0;
   left: 210px;
   width: 402px;
+  background: #fff;
   height: 493px;
   border: 1px solid #ddd;
 }
+
 .yun-calculator-content li:hover {
   color: #35b558;
 }
+
+.hulianwangsecond-content {
+  width: 402px;
+  height: 464px;
+  display: none;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 210px;
+  top: 0;
+  left: 210px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.hulianwang:hover .hulianwangsecond-content {
+  display: block;
+}
+
+.jishuzhicheng-content {
+  height: 470px;
+  display: none;
+}
+
+.jishuzhicheng-content span:hover {
+  color: #35b558;
+}
+
+.jishuzhicheng-content li:hover {
+  color: #35b558;
+}
+
+.jishuzhicheng:hover .jishuzhicheng-content {
+  display: block;
+}
+
+.call, .wxIcon {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+}
+
+.call {
+  background: url(img/tel.png) center no-repeat;
+  right: 50px;
+  bottom: 200px;
+}
+
+.call:hover {
+  background: url(img/tel_hover.png) center no-repeat;  
+}
+
+.call:hover .callImg {
+  display: block;
+}
+
+.wxImg {
+  width: 158px;
+  height: 178px;
+  left: -159px;
+  position: absolute;
+  top: -128px;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+.wxIcon:hover .wxImg {
+  display: block;
+}
+
+.call img {
+  display: none;
+  border: 1px solid #ddd;
+  position: absolute;
+  left: -142px;
+  height: 80px;
+}
+
+.wxIcon {
+  background: url(img/wx.png) center no-repeat;
+  right: 50px;
+  bottom: 160px;
+}
+
+.wxIcon:hover {
+  background: url(img/wx_hover.png) center no-repeat;
+}
+
+#wrap {
+  position: absolute;
+  left: 365px;
+  top: 90px;
+  width: 776px;
+  height: 38px;
+  border: 1px solid #ddd;
+}
+
+#wrap li {
+  float: left;
+  color: grey;
+  text-align: center;
+  line-height: 38px;
+  padding: 0 21px;
+  background: #fff;
+  /* border-right: 1px solid #f5f5f5; */
+  font-size: 12px;
+  font-weight: 100;
+  cursor: default;
+}
+
+.title {
+  border-right: 1px solid #f5f5f5;
+}
+
+/* #wrap .arrow-line {
+  position: relative;
+} */
+.arrow {
+  position: relative;
+  height: 0;
+  width: 0;
+}
+
+.arrow:before {
+  width: 0;
+  height: 0;
+  padding: 0;
+  border-top: 4px solid white;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;  
+  border-bottom: 4px solid transparent;
+  position: absolute;
+  left: 1px;
+}
+
+.arrow:after {
+  padding: 0;
+  width: 0;
+  height: 0;
+  border-top: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;  
+  border-bottom: 5px solid transparent;
+}
+
+#wrap span:hover {
+  color: #35b558;
+}
+
+.new-down span,
+.hard-band span,
+.content-type-down span,
+.course-type-down span{
+  display: block;
+  width: 100%;
+}
+
+.new ,
+.hardf-band,
+.content-type,
+.course-type{
+  text-align: center;
+}
+
+.new-down,
+.hard-band-down,
+.content-type-down,
+.course-type-down{
+  display: none;
+  background: #fff;
+}
+.content-type:hover .content-type-down {
+  display: block;
+}
+.new:hover .new-down {
+  display: block;
+}
+.course-type:hover .course-type-down {
+  display: block;
+}
+.hard-band:hover .hard-band-down {
+  display: block;
+}
+
+.new:hover,
+.hard-band:hover,
+.content-type:hover,
+.course-type:hover{
+  box-shadow: 1px 1px 4px rgba(0,0,0,.1);
+  border: 1px solid #e4e4e4;
+}
+
 
 
 
